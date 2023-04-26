@@ -44,7 +44,7 @@ time for i in {1..10}
 
 do
 
-./program_$i
+./program_$j
 
 done
 
