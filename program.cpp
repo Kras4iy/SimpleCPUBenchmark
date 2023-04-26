@@ -13,6 +13,13 @@ int main()
         sum += i;
     }
 
+    sum = 0;
+
+    for (int i = 1; i <= n; i++)
+    {
+        sum += i;
+    }
+
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> elapsed = end - start;
 
