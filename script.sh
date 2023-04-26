@@ -1,8 +1,11 @@
 #!/usr/bin/bash
 
+
+ml icc
+
 echo "start - O1"
 
-g++ -std=c++11 -O1 program.cpp -o program_O1
+icc -std=c++11 -O1 program.cpp -o program_O1
 
 time for i in {1..10}
 do
@@ -11,7 +14,7 @@ done
 
 echo "start - O2"
 
-g++ -std=c++11 -O2 program.cpp -o program_O2
+icc -std=c++11 -O2 program.cpp -o program_O2
 
 time for i in {1..10}
 do
@@ -20,7 +23,7 @@ done
 
 echo "start - O3"
 
-g++ -std=c++11 -O3 program.cpp -o program_O3
+icc -std=c++11 -O3 program.cpp -o program_O3
 
 time for i in {1..10}
 do
@@ -35,7 +38,7 @@ do
 
 echo "start - -x$i"
 
-g++ -x $i -std=c++11 program.cpp -o program_$i
+icc -x$i -std=c++11 program.cpp -o program_$i
 
 time for i in {1..10}
 
