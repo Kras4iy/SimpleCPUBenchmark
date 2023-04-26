@@ -34,7 +34,7 @@ do
 
 echo "start - -x$i"
 
-g++ -std=c++11 -x$arch program.cpp -o program_$i
+g++ -std=c++11 -x$i program.cpp -o program_$i
 
 time for i in {1..10}
 
